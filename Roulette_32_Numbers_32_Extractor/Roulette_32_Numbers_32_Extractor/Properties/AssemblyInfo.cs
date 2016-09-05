@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Roulette Numbers Extractor")]
-[assembly: AssemblyDescription("Extracts all valid roulette numbers from input file.")]
+[assembly: AssemblyDescription("Extracts all valid roulette numbers from input files.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("www.PublicDomain.tech")]
 [assembly: AssemblyProduct("Roulette Numbers Extractor")]

@@ -59,6 +59,7 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.filesCheckedListBox = new System.Windows.Forms.CheckedListBox();
 			this.extractNumbersButton = new System.Windows.Forms.Button();
+			this.mainFolderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
 			this.mainMenuStrip.SuspendLayout();
 			this.mainStatusStrip.SuspendLayout();
 			this.mainToolStrip.SuspendLayout();
@@ -334,6 +335,10 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.extractNumbersButton.UseVisualStyleBackColor = true;
 			this.extractNumbersButton.Click += new System.EventHandler(this.OnExtractNumbersButtonClick);
 			// 
+			// mainFolderBrowserDialog
+			// 
+			this.mainFolderBrowserDialog.ShowNewFolderButton = false;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,6 +361,7 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.FolderBrowserDialog mainFolderBrowserDialog;
 		private System.Windows.Forms.ToolStripButton helpToolStripButton;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
 		private System.Windows.Forms.ToolStripButton openToolStripButton;
