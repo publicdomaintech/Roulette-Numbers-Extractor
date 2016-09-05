@@ -310,7 +310,7 @@ namespace Roulette_32_Numbers_32_Extractor
         private void OnAboutToolStripMenuItemClick(object sender, EventArgs e)
         {
             // About message
-            MessageBox.Show("Programmed by Victor L. Senior (VLS)" + Environment.NewLine + "(www.publicdomain.tech / support@publicdomain.tech)" + Environment.NewLine + Environment.NewLine + "Version 1.0 - September 2016.", "Roulette Numbers Extractor");
+            MessageBox.Show("Programmed by Victor L. Senior (VLS)" + Environment.NewLine + "(www.publicdomain.tech / support@publicdomain.tech)" + Environment.NewLine + Environment.NewLine + "Version 0.1 - September 2016.", "Roulette Numbers Extractor");
         }
 
         /// <summary>
