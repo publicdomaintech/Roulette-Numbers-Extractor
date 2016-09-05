@@ -29,15 +29,8 @@ namespace Roulette_32_Numbers_32_Extractor
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
-			this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
-			this.mainToolStrip = new System.Windows.Forms.ToolStrip();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-			this.filesCheckedListBox = new System.Windows.Forms.CheckedListBox();
-			this.extractNumbersButton = new System.Windows.Forms.Button();
-			this.statusToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.fileCountToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-			this.filesTextToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,16 +42,23 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.toggleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.skipprocessedFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.alwaysOnTopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.filesfilterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.txtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.allFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.mainStatusStrip = new System.Windows.Forms.StatusStrip();
+			this.statusToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.fileCountToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.filesTextToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+			this.mainToolStrip = new System.Windows.Forms.ToolStrip();
 			this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
 			this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
 			this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.filesCheckedListBox = new System.Windows.Forms.CheckedListBox();
+			this.extractNumbersButton = new System.Windows.Forms.Button();
 			this.mainMenuStrip.SuspendLayout();
 			this.mainStatusStrip.SuspendLayout();
 			this.mainToolStrip.SuspendLayout();
@@ -78,6 +78,146 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.mainMenuStrip.TabIndex = 0;
 			this.mainMenuStrip.Text = "menuStrip1";
 			// 
+			// fileToolStripMenuItem
+			// 
+			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.newToolStripMenuItem,
+									this.openToolStripMenuItem,
+									this.toolStripSeparator2,
+									this.exitToolStripMenuItem});
+			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
+			this.fileToolStripMenuItem.Text = "&File";
+			// 
+			// newToolStripMenuItem
+			// 
+			this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
+			this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
+			this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
+			this.newToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+			this.newToolStripMenuItem.Text = "&New";
+			this.newToolStripMenuItem.Click += new System.EventHandler(this.NewToolStripMenuItemClick);
+			// 
+			// openToolStripMenuItem
+			// 
+			this.openToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripMenuItem.Image")));
+			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+			this.openToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+			this.openToolStripMenuItem.Text = "&Open";
+			this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(137, 6);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+			this.exitToolStripMenuItem.Text = "E&xit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+			// 
+			// selectionToolStripMenuItem
+			// 
+			this.selectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.selectallToolStripMenuItem,
+									this.deselectAllToolStripMenuItem,
+									this.toggleToolStripMenuItem});
+			this.selectionToolStripMenuItem.Name = "selectionToolStripMenuItem";
+			this.selectionToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+			this.selectionToolStripMenuItem.Text = "&Selection";
+			// 
+			// selectallToolStripMenuItem
+			// 
+			this.selectallToolStripMenuItem.Name = "selectallToolStripMenuItem";
+			this.selectallToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+			this.selectallToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+			this.selectallToolStripMenuItem.Text = "Select &all";
+			this.selectallToolStripMenuItem.Click += new System.EventHandler(this.SelectallToolStripMenuItemClick);
+			// 
+			// deselectAllToolStripMenuItem
+			// 
+			this.deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
+			this.deselectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+			this.deselectAllToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+			this.deselectAllToolStripMenuItem.Text = "&Deselect all";
+			this.deselectAllToolStripMenuItem.Click += new System.EventHandler(this.DeselectAllToolStripMenuItemClick);
+			// 
+			// toggleToolStripMenuItem
+			// 
+			this.toggleToolStripMenuItem.Name = "toggleToolStripMenuItem";
+			this.toggleToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
+			this.toggleToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
+			this.toggleToolStripMenuItem.Text = "To&ggle";
+			this.toggleToolStripMenuItem.Click += new System.EventHandler(this.ToggleToolStripMenuItemClick);
+			// 
+			// optionsToolStripMenuItem
+			// 
+			this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.skipprocessedFilesToolStripMenuItem,
+									this.filesfilterToolStripMenuItem});
+			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+			this.optionsToolStripMenuItem.Text = "&Options";
+			// 
+			// skipprocessedFilesToolStripMenuItem
+			// 
+			this.skipprocessedFilesToolStripMenuItem.Checked = true;
+			this.skipprocessedFilesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.skipprocessedFilesToolStripMenuItem.Name = "skipprocessedFilesToolStripMenuItem";
+			this.skipprocessedFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+			this.skipprocessedFilesToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.skipprocessedFilesToolStripMenuItem.Text = "Skip p&rocessed files";
+			this.skipprocessedFilesToolStripMenuItem.Click += new System.EventHandler(this.SkipprocessedFilesToolStripMenuItemClick);
+			// 
+			// filesfilterToolStripMenuItem
+			// 
+			this.filesfilterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.txtToolStripMenuItem,
+									this.allFilesToolStripMenuItem});
+			this.filesfilterToolStripMenuItem.Name = "filesfilterToolStripMenuItem";
+			this.filesfilterToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+			this.filesfilterToolStripMenuItem.Text = "Files filter";
+			// 
+			// txtToolStripMenuItem
+			// 
+			this.txtToolStripMenuItem.Checked = true;
+			this.txtToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.txtToolStripMenuItem.Name = "txtToolStripMenuItem";
+			this.txtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+			this.txtToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			this.txtToolStripMenuItem.Text = "*.txt (&Text files)";
+			this.txtToolStripMenuItem.Click += new System.EventHandler(this.TxtToolStripMenuItemClick);
+			// 
+			// allFilesToolStripMenuItem
+			// 
+			this.allFilesToolStripMenuItem.Name = "allFilesToolStripMenuItem";
+			this.allFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+			this.allFilesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+			this.allFilesToolStripMenuItem.Text = "*.* (&All files)";
+			this.allFilesToolStripMenuItem.Click += new System.EventHandler(this.AllFilesToolStripMenuItemClick);
+			// 
+			// helpToolStripMenuItem
+			// 
+			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.aboutToolStripMenuItem});
+			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+			this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+			this.helpToolStripMenuItem.Text = "&Help";
+			// 
+			// aboutToolStripMenuItem
+			// 
+			this.aboutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("aboutToolStripMenuItem.Image")));
+			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+			this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+			this.aboutToolStripMenuItem.Text = "&About...";
+			this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
+			// 
 			// mainStatusStrip
 			// 
 			this.mainStatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -89,6 +229,24 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.mainStatusStrip.Size = new System.Drawing.Size(284, 22);
 			this.mainStatusStrip.TabIndex = 1;
 			this.mainStatusStrip.Text = "statusStrip1";
+			// 
+			// statusToolStripStatusLabel
+			// 
+			this.statusToolStripStatusLabel.Name = "statusToolStripStatusLabel";
+			this.statusToolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
+			this.statusToolStripStatusLabel.Text = "Status:";
+			// 
+			// fileCountToolStripStatusLabel
+			// 
+			this.fileCountToolStripStatusLabel.Name = "fileCountToolStripStatusLabel";
+			this.fileCountToolStripStatusLabel.Size = new System.Drawing.Size(41, 17);
+			this.fileCountToolStripStatusLabel.Text = "waiting";
+			// 
+			// filesTextToolStripStatusLabel
+			// 
+			this.filesTextToolStripStatusLabel.Name = "filesTextToolStripStatusLabel";
+			this.filesTextToolStripStatusLabel.Size = new System.Drawing.Size(57, 17);
+			this.filesTextToolStripStatusLabel.Text = "to process";
 			// 
 			// mainToolStrip
 			// 
@@ -102,6 +260,41 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.mainToolStrip.Size = new System.Drawing.Size(284, 25);
 			this.mainToolStrip.TabIndex = 2;
 			this.mainToolStrip.Text = "toolStrip1";
+			// 
+			// newToolStripButton
+			// 
+			this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.newToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripButton.Image")));
+			this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.newToolStripButton.Name = "newToolStripButton";
+			this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
+			this.newToolStripButton.Text = "&New";
+			this.newToolStripButton.Click += new System.EventHandler(this.NewToolStripMenuItemClick);
+			// 
+			// openToolStripButton
+			// 
+			this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.openToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("openToolStripButton.Image")));
+			this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.openToolStripButton.Name = "openToolStripButton";
+			this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
+			this.openToolStripButton.Text = "&Open";
+			this.openToolStripButton.Click += new System.EventHandler(this.OpenToolStripMenuItemClick);
+			// 
+			// toolStripSeparator
+			// 
+			this.toolStripSeparator.Name = "toolStripSeparator";
+			this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
+			// 
+			// helpToolStripButton
+			// 
+			this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.helpToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("helpToolStripButton.Image")));
+			this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.helpToolStripButton.Name = "helpToolStripButton";
+			this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
+			this.helpToolStripButton.Text = "He&lp";
+			this.helpToolStripButton.Click += new System.EventHandler(this.AboutToolStripMenuItemClick);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -139,188 +332,7 @@ namespace Roulette_32_Numbers_32_Extractor
 			this.extractNumbersButton.TabIndex = 1;
 			this.extractNumbersButton.Text = "&Extract numbers";
 			this.extractNumbersButton.UseVisualStyleBackColor = true;
-			// 
-			// statusToolStripStatusLabel
-			// 
-			this.statusToolStripStatusLabel.Name = "statusToolStripStatusLabel";
-			this.statusToolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
-			this.statusToolStripStatusLabel.Text = "Status:";
-			// 
-			// fileCountToolStripStatusLabel
-			// 
-			this.fileCountToolStripStatusLabel.Name = "fileCountToolStripStatusLabel";
-			this.fileCountToolStripStatusLabel.Size = new System.Drawing.Size(41, 17);
-			this.fileCountToolStripStatusLabel.Text = "waiting";
-			// 
-			// filesTextToolStripStatusLabel
-			// 
-			this.filesTextToolStripStatusLabel.Name = "filesTextToolStripStatusLabel";
-			this.filesTextToolStripStatusLabel.Size = new System.Drawing.Size(57, 17);
-			this.filesTextToolStripStatusLabel.Text = "to process";
-			// 
-			// fileToolStripMenuItem
-			// 
-			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.newToolStripMenuItem,
-									this.openToolStripMenuItem,
-									this.toolStripSeparator2,
-									this.exitToolStripMenuItem});
-			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(35, 20);
-			this.fileToolStripMenuItem.Text = "&File";
-			// 
-			// newToolStripMenuItem
-			// 
-			this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-			this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-			this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.newToolStripMenuItem.Text = "&New";
-			// 
-			// openToolStripMenuItem
-			// 
-			this.openToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-			this.openToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.openToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.openToolStripMenuItem.Text = "&Open";
-			// 
-			// toolStripSeparator2
-			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.exitToolStripMenuItem.Text = "E&xit";
-			// 
-			// selectionToolStripMenuItem
-			// 
-			this.selectionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.selectallToolStripMenuItem,
-									this.deselectAllToolStripMenuItem,
-									this.toggleToolStripMenuItem});
-			this.selectionToolStripMenuItem.Name = "selectionToolStripMenuItem";
-			this.selectionToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-			this.selectionToolStripMenuItem.Text = "&Selection";
-			// 
-			// selectallToolStripMenuItem
-			// 
-			this.selectallToolStripMenuItem.Name = "selectallToolStripMenuItem";
-			this.selectallToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-			this.selectallToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-			this.selectallToolStripMenuItem.Text = "Select &all";
-			// 
-			// deselectAllToolStripMenuItem
-			// 
-			this.deselectAllToolStripMenuItem.Name = "deselectAllToolStripMenuItem";
-			this.deselectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-			this.deselectAllToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-			this.deselectAllToolStripMenuItem.Text = "&Deselect all";
-			// 
-			// toggleToolStripMenuItem
-			// 
-			this.toggleToolStripMenuItem.Name = "toggleToolStripMenuItem";
-			this.toggleToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.G)));
-			this.toggleToolStripMenuItem.Size = new System.Drawing.Size(167, 22);
-			this.toggleToolStripMenuItem.Text = "To&ggle";
-			// 
-			// optionsToolStripMenuItem
-			// 
-			this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.skipprocessedFilesToolStripMenuItem,
-									this.alwaysOnTopToolStripMenuItem,
-									this.filesfilterToolStripMenuItem});
-			this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-			this.optionsToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-			this.optionsToolStripMenuItem.Text = "&Options";
-			// 
-			// skipprocessedFilesToolStripMenuItem
-			// 
-			this.skipprocessedFilesToolStripMenuItem.Checked = true;
-			this.skipprocessedFilesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.skipprocessedFilesToolStripMenuItem.Name = "skipprocessedFilesToolStripMenuItem";
-			this.skipprocessedFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-			this.skipprocessedFilesToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-			this.skipprocessedFilesToolStripMenuItem.Text = "Skip p&rocessed files";
-			// 
-			// alwaysOnTopToolStripMenuItem
-			// 
-			this.alwaysOnTopToolStripMenuItem.Name = "alwaysOnTopToolStripMenuItem";
-			this.alwaysOnTopToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-			this.alwaysOnTopToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-			this.alwaysOnTopToolStripMenuItem.Text = "Always on t&op";
-			// 
-			// filesfilterToolStripMenuItem
-			// 
-			this.filesfilterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.txtToolStripMenuItem,
-									this.allFilesToolStripMenuItem});
-			this.filesfilterToolStripMenuItem.Name = "filesfilterToolStripMenuItem";
-			this.filesfilterToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
-			this.filesfilterToolStripMenuItem.Text = "Files filter";
-			// 
-			// txtToolStripMenuItem
-			// 
-			this.txtToolStripMenuItem.Checked = true;
-			this.txtToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-			this.txtToolStripMenuItem.Name = "txtToolStripMenuItem";
-			this.txtToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
-			this.txtToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			this.txtToolStripMenuItem.Text = "*.txt (&Text files)";
-			// 
-			// allFilesToolStripMenuItem
-			// 
-			this.allFilesToolStripMenuItem.Name = "allFilesToolStripMenuItem";
-			this.allFilesToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-			this.allFilesToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-			this.allFilesToolStripMenuItem.Text = "*.* (&All files)";
-			// 
-			// helpToolStripMenuItem
-			// 
-			this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-									this.aboutToolStripMenuItem});
-			this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-			this.helpToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-			this.helpToolStripMenuItem.Text = "&Help";
-			// 
-			// aboutToolStripMenuItem
-			// 
-			this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-			this.aboutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-			this.aboutToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-			this.aboutToolStripMenuItem.Text = "&About...";
-			// 
-			// newToolStripButton
-			// 
-			this.newToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.newToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.newToolStripButton.Name = "newToolStripButton";
-			this.newToolStripButton.Size = new System.Drawing.Size(23, 22);
-			this.newToolStripButton.Text = "&New";
-			// 
-			// openToolStripButton
-			// 
-			this.openToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.openToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.openToolStripButton.Name = "openToolStripButton";
-			this.openToolStripButton.Size = new System.Drawing.Size(23, 22);
-			this.openToolStripButton.Text = "&Open";
-			// 
-			// toolStripSeparator
-			// 
-			this.toolStripSeparator.Name = "toolStripSeparator";
-			this.toolStripSeparator.Size = new System.Drawing.Size(6, 25);
-			// 
-			// helpToolStripButton
-			// 
-			this.helpToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.helpToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.helpToolStripButton.Name = "helpToolStripButton";
-			this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
-			this.helpToolStripButton.Text = "He&lp";
+			this.extractNumbersButton.Click += new System.EventHandler(this.ExtractNumbersButtonClick);
 			// 
 			// MainForm
 			// 
@@ -356,7 +368,6 @@ namespace Roulette_32_Numbers_32_Extractor
 		private System.Windows.Forms.ToolStripMenuItem allFilesToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem txtToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem filesfilterToolStripMenuItem;
-		private System.Windows.Forms.ToolStripMenuItem alwaysOnTopToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem skipprocessedFilesToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toggleToolStripMenuItem;
